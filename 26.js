@@ -3,33 +3,16 @@
  * @return {number}
  */
 const removeDuplicates = nums => {
-  const SYMBOL = '_'
-  let k = 1, i = 0
+  let p = 0
 
-  for (i; i < nums.length; i++) {
-    if (nums[i] === SYMBOL) {
-      k = i
-      break
-    }
-    while(i + 1 < nums.length && nums[i] === nums[i + 1]) {
-      let j = i + 1
-      for (j; j < nums.length - 1; j++) {
-        nums[j] = nums[j + 1]
-
-        if (nums[j] === SYMBOL) {
-          break
-        }
-      }
-
-      nums[j] = SYMBOL
+  for (let i = 1; i < nums.length; i ++) {
+    if (nums[p] !== nums[i]) {
+      nums[p + 1] = nums[i]
+      p++
     }
   }
 
-  if (i === nums.length) {
-    k = nums.length
-  }
-
-  return k
+  return p + 1
 }
 
-console.log(removeDuplicates([1,1,2]))
+console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
