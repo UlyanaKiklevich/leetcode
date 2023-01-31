@@ -66,10 +66,28 @@ const searchRange = function(nums, target) {
   return [leftSubarray, rightSubarray]
 }
 
-console.log(searchRange([1], 1))
-console.log(searchRange([5,7,7,8,8,10], 8))
-console.log(searchRange([5,7,7,8,8,10], 6))
-console.log(searchRange([], 0))
-console.log(searchRange([1,1,1,1,1], 1))
-console.log(searchRange([1,2,3,4,4,4,5,5,5,5,6,6,6,6,7,8], 5))
-console.log(searchRange([1,1,1,2,4,4,4,5,5,5,5,6,7,8,8,9,9,9,9,9,9,10], 9))
+describe('Search range test', () => {
+  test('Test 1', () => {
+    expect(searchRange([1], 1)).toStrictEqual([0, 0])
+  })
+
+  test('Test 2', () => {
+    expect(searchRange([5,7,7,8,8,10], 6)).toStrictEqual([-1, -1])
+  })
+
+  test('Test 3', () => {
+    expect(searchRange([], 0)).toStrictEqual([-1, -1])
+  })
+
+  test('Test 4', () => {
+    expect(searchRange([1,1,1,1,1], 1)).toStrictEqual([0, 4])
+  })
+
+  test('Test 5', () => {
+    expect(searchRange([1,2,3,4,4,4,5,5,5,5,6,6,6,6,7,8], 5)).toStrictEqual([6, 9])
+  })
+
+  test('Test 6', () => {
+    expect(searchRange([1,1,1,2,4,4,4,5,5,5,5,6,7,8,8,9,9,9,9,9,9,10], 9)).toStrictEqual([15, 20])
+  })
+})

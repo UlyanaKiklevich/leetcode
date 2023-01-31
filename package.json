@@ -1,0 +1,24 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "12.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UlyanaKiklevich/leetcode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UlyanaKiklevich/leetcode/issues"
+  },
+  "homepage": "https://github.com/UlyanaKiklevich/leetcode#readme",
+  "dependencies": {
+    "jest": "^29.4.1",
+    "save-dev": "^0.0.1-security"
+  }
+}
