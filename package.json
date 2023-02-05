@@ -2,7 +2,6 @@
   "name": "leetcode",
   "version": "1.0.0",
   "description": "",
-  "main": "12.js",
   "scripts": {
     "test": "jest"
   },
