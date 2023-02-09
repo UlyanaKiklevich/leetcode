@@ -71,7 +71,7 @@ const distinctNames = function(ideas) {
       setA.forEach(el => unionSet.add(el))
       setB.forEach(el => unionSet.add(el))
 
-      res += 2 * (setA.length - unionSet.size) * (setB.length - unionSet.size)
+      res += 2 * (unionSet.size - setA.length) * (unionSet.size - setB.length)
     }
   }
 
