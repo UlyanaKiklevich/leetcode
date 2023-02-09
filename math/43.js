@@ -80,7 +80,7 @@ const multiply = function(num1, num2) {
 
   for(let i = m - 1; i >= 0; i--) {
     for(let j = n - 1; j >= 0; j--) {
-      let mul = num1.charAt(i) - '0' * num2.charAt(j) - '0'
+      let mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0')
       let p1 = i + j, p2 = i + j + 1
       let sum = mul + pos[p2]
 
@@ -91,13 +91,13 @@ const multiply = function(num1, num2) {
 
   let sb = ''
 
-  for(let p in pos) {
-    if (!(sb.length === 0 && p === 0)) {
+  for(let p of pos) {
+    if (!(sb.length == 0 && p == 0)) {
       sb += p
     }
   }
-
-  return sb.length === 0 ? "0" : sb
+  return sb.length == 0 ? "0" : sb
 }
 
 console.log(multiply('123', '56'))
+console.log(multiply('123456789', '987654321'))
