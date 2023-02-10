@@ -62,7 +62,7 @@ const distinctNames = function(ideas) {
 
   let res = 0
 
-  for(let i = 0; i< 26; i++) {
+  for(let i = 0; i < 26; i++) {
     for(let j = i + 1; j < 26; j++) {
       const setA = groups[i]
       const setB = groups[j]
