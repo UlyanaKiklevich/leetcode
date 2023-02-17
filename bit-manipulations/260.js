@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 const singleNumberMy = function(nums) {
-   const map = new Map(),
+  const map = new Map(),
         answ = []
 
   for (let i = 0; i < nums.length; i++) {
@@ -49,6 +49,6 @@ const singleNumber = function (nums) {
     }
   }
   return res;
-};
+}
 
 console.log(singleNumber([1,2,1,3,2,5]))
