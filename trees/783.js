@@ -1,14 +1,14 @@
 function TreeNode(val, left, right) {
-  this.val = (val===undefined ? 0 : val)
-  this.left = (left===undefined ? null : left)
-  this.right = (right===undefined ? null : right)
+  this.val = (val === undefined ? 0 : val)
+  this.left = (left === undefined ? null : left)
+  this.right = (right === undefined ? null : right)
 }
 
 /**
  * @param {TreeNode} root
  * @return {number}
  */
-const minDiffInBSTMy = function(root) {
+const minDiffInBSTMy = function (root) {
   const diff = []
   const t = (root) => {
     if (root) {
@@ -37,7 +37,7 @@ const minDiffInBSTMy = function(root) {
   * @param {TreeNode} root
   * @return {number}
   */
-const minDiffInBST = function(root) {
+const minDiffInBST = function (root) {
   let res = 100000, pre = -1
 
   const t = (root) => {
@@ -63,6 +63,6 @@ const minDiffInBST = function(root) {
 /*const root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))*/
 const root = new TreeNode(4, new TreeNode(6), new TreeNode(2, new TreeNode(1), new TreeNode(3)))
 
-const root1 = new TreeNode(90, new TreeNode(69, new TreeNode(49, undefined, new TreeNode(52)), new TreeNode(89)) )
+const root1 = new TreeNode(90, new TreeNode(69, new TreeNode(49, undefined, new TreeNode(52)), new TreeNode(89)))
 
 console.log(minDiffInBST(root1))
