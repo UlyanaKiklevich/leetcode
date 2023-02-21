@@ -1,6 +1,9 @@
 const DegreeToRad = (angle) => {
   return angle * Math.PI / 180
 }
+const RadToDegree = (angle) => {
+  return angle * 180 / Math.PI
+}
 
 const Radius = (wheelBase, angle) => {
   return wheelBase / Math.sin(DegreeToRad(angle))
@@ -21,7 +24,9 @@ const getY = (angle, radius, distance) => {
     : radius * Math.sin(angle)
 }
 
-const input = '2.70 3 5.00 10.00 5.00 -10.00 20.00 0.00'.split(' ')
+//80.00 65.20
+//PASS L5_X9E1P2312Z446 138.38
+const input = '3.60 3 50.00 0 23.38 14.00 65 0'.split(' ')
 const wheelBase = input[0]
 let degree = 0,
   x = 0,
