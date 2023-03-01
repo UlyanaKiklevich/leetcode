@@ -1,4 +1,4 @@
-https://leetcode.com/problems/add-two-numbers/solutions/1340/a-summary-about-how-to-solve-linked-list-problem-c/?orderBy=most_votes
+/*https://leetcode.com/problems/add-two-numbers/solutions/1340/a-summary-about-how-to-solve-linked-list-problem-c/?orderBy=most_votes*/
 
 function ListNode(val, next) {
   this.val = (val === undefined ? 0 : val)
