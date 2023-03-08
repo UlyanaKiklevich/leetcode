@@ -4,7 +4,7 @@
  * @return {number}
  */
 const minEatingSpeed = function(piles, h) {
-  let l = 0, r = Number.MAX_VALUE
+  let l = 0, r = Math.max(...piles)
 
   while(l <= r) {
     const m = Math.trunc((r - l) / 2) + l
